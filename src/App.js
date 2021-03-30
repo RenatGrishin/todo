@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import CardContainer from "./pages/cardContainer";
 
-function App() {
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className={"main_board"}>
+        <div className={"board_execute"}><CardContainer boardNum={0} /></div>
+        <div className={"board_doing"}><CardContainer boardNum={1} /></div>
+        <div className={"board_completed"}><CardContainer boardNum={2} /></div>
+      </div>
     </div>
   );
 }

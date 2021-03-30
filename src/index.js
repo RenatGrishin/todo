@@ -3,15 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import store from "./store/store";
+import Provider from "react-redux/es/components/Provider";
+import {deleteCard} from "./store/action/cardsAction";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+let rerenderReactDOM =(state)=>{
+  //state.dispatch(deleteCard())
+  console.log(state.getState())
+  ReactDOM.render(
+    <React.StrictMode>
+      <Provider store={state}>
+        <App props={state.getState()} />
+      </Provider>
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
+  reportWebVitals();
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+rerenderReactDOM(store);
+store.subscribe(()=>{rerenderReactDOM(store)})
+
