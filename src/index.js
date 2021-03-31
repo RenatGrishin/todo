@@ -8,7 +8,6 @@ import Provider from "react-redux/es/components/Provider";
 import {deleteCard} from "./store/action/cardsAction";
 
 let rerenderReactDOM =(state)=>{
-  //state.dispatch(deleteCard())
   console.log(state.getState())
   ReactDOM.render(
     <React.StrictMode>

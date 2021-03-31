@@ -2,21 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa1a9ad6-57e1-4a6f-9fb3-6eaacb6b4037" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/cardContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/action/boardAction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/action/cardsAction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducer/boardsReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducer/cardsReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/cardContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/cardContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/action/cardsAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/action/cardsAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducer/boardsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer/boardsReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducer/cardsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer/cardsReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,11 +33,17 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -86,8 +84,16 @@
       <updated>1616696746589</updated>
       <workItem from="1616696747653" duration="1138000" />
       <workItem from="1616835307213" duration="9781000" />
-      <workItem from="1616938332357" duration="13121000" />
+      <workItem from="1616938332357" duration="23657000" />
     </task>
+    <task id="LOCAL-00001" summary="ToDo">
+      <created>1617126433450</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1617126433450</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,5 +111,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ToDo" />
+    <option name="LAST_COMMIT_MESSAGE" value="ToDo" />
   </component>
 </project>
