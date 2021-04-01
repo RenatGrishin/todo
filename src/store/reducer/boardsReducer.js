@@ -1,4 +1,4 @@
-import {EDIT_POSITION} from "../action/boardAction";
+import {DELETE_CARD_BOARD, EDIT_POSITION} from "../action/boardAction";
 
 let initialState = {
 	execute: [
@@ -11,9 +11,32 @@ let initialState = {
 }
 
 function boardTodo (state=initialState, action){
+	let copyState = {...state};
+	let board = [];
+	let newBoard = [];
 	switch (action.type) {
 		case EDIT_POSITION:
 			return state;
+
+		case DELETE_CARD_BOARD:
+			if(action.idBoard === 0)board = [...copyState.execute];
+			if(action.idBoard === 1)board = [...copyState.doing];
+			if(action.idBoard === 2)board = [...copyState.completed];
+
+			board.map(key => {
+				if(key.cardID < action.idCard) newBoard.push(key);
+				if(key.cardID > action.idCard){
+					key.position -= 1;
+					newBoard.push(key);
+				}
+			})
+
+			if(action.idBoard === 0) copyState.execute = newBoard;
+			if(action.idBoard === 1) copyState.doing = newBoard;
+			if(action.idBoard === 2) copyState.completed = newBoard;
+
+			return copyState;
+
 		default: return state;
 	}
 }

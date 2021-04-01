@@ -5,10 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import store from "./store/store";
 import Provider from "react-redux/es/components/Provider";
-import {deleteCard} from "./store/action/cardsAction";
 
 let rerenderReactDOM =(state)=>{
-  console.log(state.getState())
   ReactDOM.render(
     <React.StrictMode>
       <Provider store={state}>
