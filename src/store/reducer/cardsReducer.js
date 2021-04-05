@@ -14,22 +14,23 @@ function cardsTodo (state=initialState, action){
 	switch (action.type) {
 		case ADD_CARD:
 			return state;
+
 		case DELETE_CARD:
 			return  state.filter(key => key.id !== action.id);
+
 		case EDIT_CARD:
 			copyState = [...state];
-			console.log(copyState)
 			elementIndex = copyState.findIndex(key => key.id === action.id);
 			element = copyState[elementIndex];
 			element.text = action.text;
 			copyState[elementIndex] = element;
 			return copyState;
+
 		case STATUS_INPUT:
 			copyState = [...state];
 			elementIndex = copyState.findIndex(key => key.id === action.id);
 			element = copyState[elementIndex];
 			element.edit = !element.edit;
-			console.log(copyState);
 			return copyState;
 
 		default: return state;

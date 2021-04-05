@@ -12,7 +12,7 @@ function Card(props) {
 			: <p onClick={()=>{props.statusInput(props.cardInfo.id)}} >{props.cardInfo.text}</p> }
 		<div className={"submit_place"}>
 			<input type={"submit"} onClick={()=>{console.log("Сделать")}} value={"Сделать"} />
-			<input type={"submit"} onClick={()=>{console.log("Выполняю")}} value={"Выполняю"} />
+			<input type={"submit"} onClick={()=>{props.editStatus(props.cardInfo.id, props.boardID, 1)}} value={"Выполняю"} />
 			<input type={"submit"} onClick={()=>{console.log("Готово")}} value={"Готово"} />
 			<input type={"submit"} onClick={()=>{props.deleteCardFromBoard(
 				props.cardInfo.id,
@@ -20,6 +20,8 @@ function Card(props) {
 				props.boardID,
 				props.deleteCardBoard
 			)}} value={"X"} />
+			<input type={"submit"} onClick={()=>{console.log("△")}} value={"△"} />
+			<input type={"submit"} onClick={()=>{console.log("▽")}} value={"▽"} />
 		</div>
 	</div>
 }

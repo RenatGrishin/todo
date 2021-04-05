@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa1a9ad6-57e1-4a6f-9fb3-6eaacb6b4037" name="Default Changelist" comment="">
+    <list default="true" id="aa1a9ad6-57e1-4a6f-9fb3-6eaacb6b4037" name="Default Changelist" comment="Удаление карт">
+      <change afterPath="$PROJECT_DIR$/src/pages/addCard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/addCardContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/card.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/cardContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/cardContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/action/boardAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/action/boardAction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/reducer/boardsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer/boardsReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducer/cardsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer/cardsReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +87,8 @@
       <updated>1616696746589</updated>
       <workItem from="1616696747653" duration="1138000" />
       <workItem from="1616835307213" duration="9781000" />
-      <workItem from="1616938332357" duration="30837000" />
+      <workItem from="1616938332357" duration="38528000" />
+      <workItem from="1617618352202" duration="3307000" />
     </task>
     <task id="LOCAL-00001" summary="ToDo">
       <created>1617126433450</created>
@@ -99,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617219610335</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Можно редактировать текст в картах">
+      <created>1617278796343</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617278796343</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

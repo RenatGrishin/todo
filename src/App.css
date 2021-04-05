@@ -31,3 +31,21 @@
   margin-right: 10px;
   outline: none;
 }
+
+.addCardBTN{
+  margin: 10px;
+  border: 2px dashed #fff;
+  border-radius: 4px;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+.addCardBTN:hover{
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.addCardBTN span{
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: 700;
+  cursor: pointer;
+}
