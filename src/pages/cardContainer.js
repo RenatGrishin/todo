@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./card";
 import {connect} from "react-redux";
 import {deleteCard, editCard, statusInput} from "../store/action/cardsAction";
-import {deleteCardBoard, editStatus} from "../store/action/boardAction";
+import {deleteCardBoard, editPosition, editStatus} from "../store/action/boardAction";
 
 function cardsSortForBoard(props) {
 	switch (props.boardNum) {
@@ -14,14 +14,15 @@ function cardsSortForBoard(props) {
 			props.editCard,
 			props.statusInput,
 			props.deleteCardBoard,
-			props.editStatus
+			props.editStatus,
+			props.editPosition
 			);
 		case 1: return getCardsFromBoard(props.boardNum, props.boards.doing, props.cards);
 		case 2: return getCardsFromBoard(props.boardNum, props.boards.completed, props.cards);
 		default: return false;
 	}
 }
-function getCardsFromBoard(boardID, board, cards, deleteCard, editCard, statusInput, deleteCardBoard, editStatus){
+function getCardsFromBoard(boardID, board, cards, deleteCard, editCard, statusInput, deleteCardBoard, editStatus, editPosition){
 	let showCards = [];
 	for(let i=0; i<board.length; i++){
 		let boardCard = board.filter(key => key.position === i)[0];
@@ -38,6 +39,7 @@ function getCardsFromBoard(boardID, board, cards, deleteCard, editCard, statusIn
 			deleteCardBoard={deleteCardBoard}
 			deleteCardFromBoard={deleteCardFromBoard}
 			editStatus={editStatus}
+			editPosition={editPosition}
 		/>);
 	}
 	return showCards;
@@ -56,5 +58,5 @@ function mapStateToProps(state) {
 }
 
 const CardContainer = connect(mapStateToProps, {deleteCard, editCard, statusInput,
-	deleteCardBoard, editStatus})(cardsSortForBoard);
+	deleteCardBoard, editStatus, editPosition})(cardsSortForBoard);
 export default CardContainer;

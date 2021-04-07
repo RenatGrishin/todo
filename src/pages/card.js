@@ -3,6 +3,7 @@ import '../App.css';
 
 function Card(props) {
 	return<div className={"card_todo"}>
+		<span>{props.cardInfo.id}</span>
 		{props.cardInfo.edit
 			? <input onBlur={()=>{props.statusInput(props.cardInfo.id)}}
 			         type={"text"}
@@ -20,8 +21,8 @@ function Card(props) {
 				props.boardID,
 				props.deleteCardBoard
 			)}} value={"X"} />
-			<input type={"submit"} onClick={()=>{console.log("△")}} value={"△"} />
-			<input type={"submit"} onClick={()=>{console.log("▽")}} value={"▽"} />
+			<input type={"submit"} onClick={()=>{props.editPosition(props.cardInfo.id, props.boardID, true)}} value={"△"} />
+			<input type={"submit"} onClick={()=>{props.editPosition(props.cardInfo.id, props.boardID, false)}} value={"▽"} />
 		</div>
 	</div>
 }

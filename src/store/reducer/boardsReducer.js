@@ -15,9 +15,8 @@ function boardTodo (state=initialState, action){
 	let board = [];
 	let oldBoard = [];
 	let newBoard = [];
+
 	switch (action.type) {
-		case EDIT_POSITION:
-			return state;
 
 		case DELETE_CARD_BOARD:
 			if(action.idBoard === 0)board = [...copyState.execute];
@@ -74,6 +73,24 @@ function boardTodo (state=initialState, action){
 				copyState.completed.push(newCard);
 			}
 
+			return copyState;
+
+		case EDIT_POSITION:
+			if(action.boardID === 0)board = [...copyState.execute];
+			if(action.boardID === 1)board = [...copyState.doing];
+			if(action.boardID === 2)board = [...copyState.completed];
+
+			console.log("idCard: " +action.cardID+ " idBoard: " +action.boardID+ " direction: " +action.direction);
+
+			let firstCardIndex = board.findIndex( key => key.cardID === action.cardID );
+			let firstCard = board[firstCardIndex];
+			let directionType = action.direction ? firstCard.position-1 : firstCard.position+1;
+			let secondCardIndex = board.findIndex( key => key.position === directionType );
+			let secondCard = board[secondCardIndex];
+			if(secondCardIndex === -1) return state;
+
+			board[firstCardIndex].position = directionType;
+			board[secondCardIndex].position = action.direction ? secondCard.position+1 : secondCard.position-1;
 			return copyState;
 
 		default: return state;

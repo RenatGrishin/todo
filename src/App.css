@@ -30,6 +30,10 @@
   padding: 2px 6px;
   margin-right: 10px;
   outline: none;
+  cursor: pointer;
+}
+.submit_place input:hover{
+  background-color: coral;
 }
 
 .addCardBTN{
