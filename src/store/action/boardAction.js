@@ -1,6 +1,7 @@
 export const DELETE_CARD_BOARD = "DELETE_CARD_BOARD";
 export const EDIT_STATUS = "EDIT_STATUS";
 export const EDIT_POSITION = "EDIT_POSITION";
+export const ADD_NEW_CARD_TO_BOARD = "ADD_NEW_CARD_TO_BOARD";
 
 export function deleteCardBoard(idCard, idBoard){
 	return{
@@ -25,5 +26,12 @@ export function editPosition(cardID, boardID, direction){
 		cardID,
 		boardID,
 		direction
+	}
+}
+
+export function addNewCardToBoard(cardID) {
+	return{
+		type: ADD_NEW_CARD_TO_BOARD,
+		cardID: cardID
 	}
 }

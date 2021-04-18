@@ -1,4 +1,4 @@
-import {DELETE_CARD_BOARD, EDIT_POSITION, EDIT_STATUS} from "../action/boardAction";
+import {ADD_NEW_CARD_TO_BOARD, DELETE_CARD_BOARD, EDIT_POSITION, EDIT_STATUS} from "../action/boardAction";
 
 let initialState = {
 	execute: [
@@ -80,8 +80,6 @@ function boardTodo (state=initialState, action){
 			if(action.boardID === 1)board = [...copyState.doing];
 			if(action.boardID === 2)board = [...copyState.completed];
 
-			console.log("idCard: " +action.cardID+ " idBoard: " +action.boardID+ " direction: " +action.direction);
-
 			let firstCardIndex = board.findIndex( key => key.cardID === action.cardID );
 			let firstCard = board[firstCardIndex];
 			let directionType = action.direction ? firstCard.position-1 : firstCard.position+1;
@@ -91,6 +89,19 @@ function boardTodo (state=initialState, action){
 
 			board[firstCardIndex].position = directionType;
 			board[secondCardIndex].position = action.direction ? secondCard.position+1 : secondCard.position-1;
+			return copyState;
+
+		case ADD_NEW_CARD_TO_BOARD:
+			copyState.execute = [...state.execute];
+			let lastPosition = 0;
+			let newExecute = {cardID: action.cardID, position: 0};
+			copyState.execute.map( key => {
+				if(key.position === lastPosition) newExecute.position = key.position + 1;
+				if(key.position > lastPosition) newExecute.position = key.position + 1;
+				return true;
+			} );
+			copyState.execute.push(newExecute);
+
 			return copyState;
 
 		default: return state;
