@@ -12,7 +12,22 @@ function addCards(props) {
 		deleteDraft={props.deleteDraft}
 		editDraft={props.editDraft}
 		addNewCardToBoard={props.addNewCardToBoard}
+		validationText={validationText}
 	/>
+}
+
+function validationText (status, value, createDraft, addCard, addNewCardToBoard, deleteDraft, id) {
+	if (status) {
+		createDraft();
+		return true;
+	}
+	value = value.trim();
+	if(!value){
+		return false
+	}
+	addCard();
+	addNewCardToBoard(id);
+	deleteDraft();
 }
 
 function mapStateToProps(state) {
@@ -21,6 +36,7 @@ function mapStateToProps(state) {
 	}
 }
 
-let AddCardContainer = connect(mapStateToProps, {addCard, createDraft, deleteDraft, editDraft, addNewCardToBoard})(addCards);
+let AddCardContainer = connect(mapStateToProps,
+	{addCard, createDraft, deleteDraft, editDraft, addNewCardToBoard})(addCards);
 
 export default AddCardContainer;

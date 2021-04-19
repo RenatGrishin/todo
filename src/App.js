@@ -6,9 +6,9 @@ function App(props) {
   return (
     <div>
       <div className={"main_board"}>
-        <div className={"board_execute"}><CardContainer boardNum={0} /><AddCardContainer/></div>
-        <div className={"board_doing"}><CardContainer boardNum={1} /></div>
-        <div className={"board_completed"}><CardContainer boardNum={2} /></div>
+        <div className={"board_execute"}><h1>Сделать</h1><CardContainer boardNum={0} /><AddCardContainer/></div>
+        <div className={"board_doing"}><h1>Выполняются</h1><CardContainer boardNum={1} /></div>
+        <div className={"board_completed"}><h1>Готовые</h1><CardContainer boardNum={2} /></div>
       </div>
     </div>
   );

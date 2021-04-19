@@ -30,7 +30,9 @@ function cardsTodo (state=initialState, action){
 			return copyState;
 
 		case DELETE_CARD:
-			return  state.cards.filter(key => key.id !== action.id);
+			let newCardsList = state.cards.filter(key => key.id !== action.id);
+			copyState.cards = newCardsList;
+			return copyState;
 
 		case EDIT_CARD:
 			copyState.cards = [...state.cards];

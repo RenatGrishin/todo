@@ -23,14 +23,16 @@ function boardTodo (state=initialState, action){
 			if(action.idBoard === 1)board = [...copyState.doing];
 			if(action.idBoard === 2)board = [...copyState.completed];
 
-			board.map(key => {
-				if(key.cardID < action.idCard) newBoard.push(key);
-				if(key.cardID > action.idCard){
+			let deleteElement = board.find(key => key.cardID === action.idCard);
+
+			board.map( key => {
+				if(key.position < deleteElement.position) newBoard.push(key);
+				if(key.position > deleteElement.position){
 					key.position -= 1;
-					newBoard.push(key);
+					newBoard.push(key)
 				}
 				return newBoard;
-			})
+			});
 
 			if(action.idBoard === 0) copyState.execute = newBoard;
 			if(action.idBoard === 1) copyState.doing = newBoard;

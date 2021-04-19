@@ -4,14 +4,18 @@
   display: grid;
   grid-template-columns: 300px 300px 300px;
 }
+.main_board>div h1{
+  margin-left: 10px;
+  color: #ffffff;
+}
 .board_execute{
-  background-color: aquamarine;
+  background-color: lightgreen;
 }
 .board_doing{
-  background-color: blanchedalmond;
+  background-color: lightcoral;
 }
 .board_completed{
-  background-color: aqua;
+  background-color: lightskyblue;
 }
 
 .card_todo{
@@ -20,22 +24,59 @@
   background-color: white;
   border-radius: 4px;
   box-shadow: 0px 1px 2px 0px rgba(0,0,0, 0.2);
+  display: grid;
+  grid-template:
+          "text arrow"
+          "subm delet"
+          /1fr 30px
+  ;
+}
+.text{
+  grid-area: text;
+}
+.arrows{
+  grid-area: arrow;
+  text-align: right;
+}
+.delete{
+  grid-area: delet;
+  text-align: right;
 }
 .submit_place{
-  padding-top: 10px;
+  grid-area: subm;
 }
-.submit_place input{
+.submit_place input, .delete input, .arrows input, .text input{
   border: 0px;
   border-radius: 3px;
   padding: 2px 6px;
-  margin-right: 10px;
   outline: none;
   cursor: pointer;
+}
+.submit_place input:not(:last-child){
+  margin-right: 10px;
+}
+.arrows input {
+  margin-bottom: 5px;
+}
+.arrows input:hover{
+  background-color: darksalmon;
+  color: white;
+}
+.delete input, .arrows input, .text input{
+  width: 28px;
+}
+.delete input:hover{
+  background-color: brown;
+  color: white;
 }
 .submit_place input:hover{
   background-color: coral;
 }
-
+.text input{
+   box-sizing: border-box;
+   width: 100%;
+   white-space: pre-wrap;
+ }
 .addCardBTN{
   margin: 10px;
   border: 2px dashed #fff;

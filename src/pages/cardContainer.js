@@ -6,20 +6,12 @@ import {deleteCardBoard, editPosition, editStatus} from "../store/action/boardAc
 
 function cardsSortForBoard(props) {
 	switch (props.boardNum) {
-		case 0: return getCardsFromBoard(
-			props.boardNum,
-			props.boards.execute,
-			props.cards,
-			props.deleteCard,
-			props.editCard,
-			props.statusInput,
-			props.deleteCardBoard,
-			props.editStatus,
-			props.editPosition,
-			props.addCard,
-			);
-		case 1: return getCardsFromBoard(props.boardNum, props.boards.doing, props.cards);
-		case 2: return getCardsFromBoard(props.boardNum, props.boards.completed, props.cards);
+		case 0: return getCardsFromBoard(props.boardNum, props.boards.execute, props.cards, props.deleteCard,
+			props.editCard, props.statusInput, props.deleteCardBoard, props.editStatus, props.editPosition, props.addCard );
+		case 1: return getCardsFromBoard(props.boardNum, props.boards.doing, props.cards, props.deleteCard,
+			props.editCard, props.statusInput, props.deleteCardBoard, props.editStatus, props.editPosition, props.addCard );
+		case 2: return getCardsFromBoard(props.boardNum, props.boards.completed, props.cards, props.deleteCard,
+			props.editCard, props.statusInput, props.deleteCardBoard, props.editStatus, props.editPosition, props.addCard );
 		default: return false;
 	}
 }

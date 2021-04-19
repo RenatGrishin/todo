@@ -6,15 +6,10 @@ class AddCard extends  React.Component{
 		add: false
 	};
 
-	updateAddStatus(status){
+	updateAddStatus(status, value=''){
 		this.setState({add: status});
-		if (status) {
-			this.props.createDraft();
-		}else{
-			this.props.addCard();
-			this.props.addNewCardToBoard(this.props.draft.id)
-			this.props.deleteDraft();
-		}
+		this.props.validationText(status, value, this.props.createDraft, this.props.addCard, this.props.addNewCardToBoard,
+			this.props.deleteDraft, this.props.draft.id);
 	}
 
 	render() {
@@ -31,7 +26,7 @@ class AddCard extends  React.Component{
 					       onChange={(e)=>{this.props.editDraft(e.target.value)}}
 					       autoFocus={true}
 					       value={this.props.draft.text}
-					       onBlur={()=>{this.updateAddStatus(false)}}
+					       onBlur={(e)=>{this.updateAddStatus(false, e.target.value)}}
 					/>
 				</div>
 			}
