@@ -1,8 +1,10 @@
 *{margin: 0; padding: 0}
+html, body, #root, .main_page{height: 100%;}
 
 .main_board{
+  height: 100%;
   display: grid;
-  grid-template-columns: 300px 300px 300px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .main_board>div h1{
   margin-left: 10px;
@@ -19,6 +21,8 @@
 }
 
 .card_todo{
+  min-width: 300px;
+  max-width: 100%;
   margin: 10px;
   padding: 10px;
   background-color: white;
@@ -52,6 +56,13 @@
   outline: none;
   cursor: pointer;
 }
+.submit_place input:enabled:hover{
+  background-color: coral;
+  cursor: pointer;
+}
+.submit_place input:disabled:hover{
+  cursor: initial;
+}
 .submit_place input:not(:last-child){
   margin-right: 10px;
 }
@@ -69,14 +80,27 @@
   background-color: brown;
   color: white;
 }
-.submit_place input:hover{
-  background-color: coral;
+.text{
+  width: 100%;
+  padding-right: 10px;
+  box-sizing: border-box;
 }
-.text input{
-   box-sizing: border-box;
-   width: 100%;
-   white-space: pre-wrap;
+.text textarea{
+  box-sizing: border-box;
+  min-width: 100%;
+  min-height: 50px;
+  white-space: pre-wrap;
+  resize: vertical;
+  outline: none;
+  border: 1px solid rgba(0,0,0, 0.08);
+  font-size: 16px;
+  font-family: sans-serif;
+  color: rgba(0,0,0, 0.7);
  }
+.text p {
+  max-width: 100%;
+  word-break: break-all;
+}
 .addCardBTN{
   margin: 10px;
   border: 2px dashed #fff;
@@ -94,15 +118,23 @@
   font-weight: 700;
   cursor: pointer;
 }
-input.inputNewCard{
+.addCardNew{
   margin: 10px;
   padding: 10px;
   box-sizing: border-box;
   background-color: white;
   border-radius: 4px;
   box-shadow: 0px 1px 2px 0px rgba(0,0,0, 0.2);
+}
+textarea.inputNewCard{
+  width: 100%;
   border: 0px;
   outline: none;
-  width: 93%;
+  border: 1px solid rgba(0,0,0, 0.08);
+  min-height: 90px;
+  font-size: 16px;
+  font-family: sans-serif;
+  color: rgba(0,0,0, 0.7);
   box-sizing: border-box;
+  resize: vertical;
 }

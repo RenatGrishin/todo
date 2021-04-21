@@ -20,14 +20,14 @@ class AddCard extends  React.Component{
 				}} className={"addCardBTN"}>
 					<span>Добавить задание</span>
 				</div>
-				: <div>
-					<input type={"text"}
+				: <div className={"addCardNew"}>
+					<textarea type={"text"}
 					       className={"inputNewCard"}
 					       onChange={(e)=>{this.props.editDraft(e.target.value)}}
 					       autoFocus={true}
 					       value={this.props.draft.text}
 					       onBlur={(e)=>{this.updateAddStatus(false, e.target.value)}}
-					/>
+					></textarea>
 				</div>
 			}
 		</div>

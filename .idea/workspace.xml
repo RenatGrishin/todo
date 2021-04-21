@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa1a9ad6-57e1-4a6f-9fb3-6eaacb6b4037" name="Default Changelist" comment="">
+    <list default="true" id="aa1a9ad6-57e1-4a6f-9fb3-6eaacb6b4037" name="Default Changelist" comment="Редактирование карты&#10;Удаление карты&#10;Перенос карты в соседний раздел&#10;Изменение порядка кард&#10;Добавление новой карты&#10;&#10;Исправления:&#10;Баг с удалением элемента, который менял свой порядок в столбце. Если поменять порядок элемента и удалить его, то исчезали все карточки в столбце.&#10;Баг при котором исчезали элементы в столбце. (если поменять порядок последнего элемента и добавить новую запись)&#10;Внешний вид.&#10;Теперь все столбцы работают.&#10;У каждого стобца отключена кнопка переноса карточки в родительский столбец.&#10;Изменились поля при изменении карточки и добавлении карточки.&#10;Страница растягивается.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/addCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/addCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/addCardContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/addCardContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/cardContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/cardContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/reducer/boardsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer/boardsReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducer/cardsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer/cardsReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +85,7 @@
       <workItem from="1616835307213" duration="9781000" />
       <workItem from="1616938332357" duration="38528000" />
       <workItem from="1617618352202" duration="49904000" />
-      <workItem from="1618849554724" duration="2584000" />
+      <workItem from="1618849554724" duration="11853000" />
     </task>
     <task id="LOCAL-00001" summary="ToDo">
       <created>1617126433450</created>
@@ -132,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618764724799</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Редактирование карты&#10;Удаление карты&#10;Перенос карты в соседний раздел&#10;Изменение порядка кард&#10;Добавление новой карты&#10;&#10;Исправления:&#10;Баг с удалением элемента, который менял свой порядок в столбце. Если поменять порядок элемента и удалить его, то исчезали все карточки в столбце.&#10;Внешний вид.&#10;Теперь все столбцы работают.&#10;&#10;Желательно поправить:&#10;Изменить внешний вид поля input при вводе задания.&#10;У каждого стобца деактивировать кнопку, которая переносит карту в родительский столбец">
+      <created>1618854238205</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1618854238205</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +161,7 @@
     <MESSAGE value="(Первый столбец)&#10;Редактирование карты&#10;Удаление карты&#10;Перенос карты в соседний раздел" />
     <MESSAGE value="(Первый столбец)&#10;Редактирование карты&#10;Удаление карты&#10;Перенос карты в соседний раздел&#10;Изменение порядка кард" />
     <MESSAGE value="(Первый столбец)&#10;Редактирование карты&#10;Удаление карты&#10;Перенос карты в соседний раздел&#10;Изменение порядка кард&#10;Добавление новой карты" />
-    <option name="LAST_COMMIT_MESSAGE" value="(Первый столбец)&#10;Редактирование карты&#10;Удаление карты&#10;Перенос карты в соседний раздел&#10;Изменение порядка кард&#10;Добавление новой карты" />
+    <MESSAGE value="Редактирование карты&#10;Удаление карты&#10;Перенос карты в соседний раздел&#10;Изменение порядка кард&#10;Добавление новой карты&#10;&#10;Исправления:&#10;Баг с удалением элемента, который менял свой порядок в столбце. Если поменять порядок элемента и удалить его, то исчезали все карточки в столбце.&#10;Внешний вид.&#10;Теперь все столбцы работают.&#10;&#10;Желательно поправить:&#10;Изменить внешний вид поля input при вводе задания.&#10;У каждого стобца деактивировать кнопку, которая переносит карту в родительский столбец" />
+    <option name="LAST_COMMIT_MESSAGE" value="Редактирование карты&#10;Удаление карты&#10;Перенос карты в соседний раздел&#10;Изменение порядка кард&#10;Добавление новой карты&#10;&#10;Исправления:&#10;Баг с удалением элемента, который менял свой порядок в столбце. Если поменять порядок элемента и удалить его, то исчезали все карточки в столбце.&#10;Внешний вид.&#10;Теперь все столбцы работают.&#10;&#10;Желательно поправить:&#10;Изменить внешний вид поля input при вводе задания.&#10;У каждого стобца деактивировать кнопку, которая переносит карту в родительский столбец" />
   </component>
 </project>

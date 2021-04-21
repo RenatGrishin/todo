@@ -95,11 +95,10 @@ function boardTodo (state=initialState, action){
 
 		case ADD_NEW_CARD_TO_BOARD:
 			copyState.execute = [...state.execute];
-			let lastPosition = 0;
 			let newExecute = {cardID: action.cardID, position: 0};
 			copyState.execute.map( key => {
-				if(key.position === lastPosition) newExecute.position = key.position + 1;
-				if(key.position > lastPosition) newExecute.position = key.position + 1;
+				if(key.position === newExecute.position) newExecute.position = key.position + 1;
+				if(key.position > newExecute.position) newExecute.position = key.position + 1;
 				return true;
 			} );
 			copyState.execute.push(newExecute);
